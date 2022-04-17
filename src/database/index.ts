@@ -1,12 +1,15 @@
-import { DataSource } from "typeorm";
+import { createConnection } from "typeorm";
 
-const dataSource = new DataSource({
-  type: "postgres",
-  host: "localhost",
-  port: 5432,
-  username: "docker",
-  password: "ignite",
-  database: "rentalx",
-});
+createConnection();
 
-dataSource.initialize();
+// export const dataSource = new DataSource({
+//   type: "postgres",
+//   host: "database",
+//   port: 5432,
+//   username: "docker",
+//   password: "ignite",
+//   database: "rentalx",
+//   migrations: ["src/database/migrations/*.ts"],
+// }).initialize();
+
+// dataSource.initialize();
